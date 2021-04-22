@@ -1,7 +1,13 @@
 import { products } from '../data';
 
-const categoryResolver = (_parent: any, args: { title: string }) => {
-    const { title } = args;
+type Args = {
+    input?: {
+        title: string
+    }
+}
+
+const categoryResolver = (_parent: any, args: Args) => {
+    const { input: { title } = {} } = args;
 
     const result = title 
         ? products.filter(

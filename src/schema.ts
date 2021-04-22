@@ -31,8 +31,12 @@ const typeDefs = gql`
         products: [Product]!
     }
 
+    input CategoryInput {
+        title: String
+    }
+
     type Query {
-        category(title: String): Category,
+        category(input: CategoryInput): Category,
         currencies: [String]
     }
 `;
