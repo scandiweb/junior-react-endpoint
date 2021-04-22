@@ -22,7 +22,7 @@ const typeDefs = gql`
         gallery: [String],
         description: String!,
         options: OptionSet
-        price: [Price!]!,
+        prices: [Price!]!,
     }
 
     type Category {

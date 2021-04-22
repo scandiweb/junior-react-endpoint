@@ -1,25 +1,15 @@
-const Category = {
-    clothes: 'clothes'
-};
+import Product from "./model/product";
+import { Category } from "./type";
 
-export const products = [{
-    name: 'Sneakers',
-    price: [{
-        currency: 'EUR',
-        amount: 99.90
-    }, {
-        currency: 'USD',
-        amount: 120.49
-    }],
-    category: Category.clothes
-}, {
-    name: 'Jacket',
-    price: [{
-        currency: 'EUR',
-        amount: 349.99
-    }, {
-        currency: 'USD',
-        amount: 421.79
-    }],
-    category: Category.clothes
-}];
+
+const products: Product[] = [
+    new Product('Sneakers')
+        .setPrice(99.90)
+        .setCategory(Category.clothes),
+
+    new Product('Jacket')
+        .setPrice(349.99)
+        .setCategory(Category.clothes)
+];
+
+export { products };
