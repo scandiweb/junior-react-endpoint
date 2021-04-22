@@ -31,7 +31,8 @@ const typeDefs = gql`
     }
 
     type Query {
-        category(title: String): Category
+        category(title: String): Category,
+        currencies: [String]
     }
 `;
 

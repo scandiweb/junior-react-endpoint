@@ -1,8 +1,10 @@
 import categoryResolver from './category';
+import currencyResolver from './currencies';
 
 const resolvers = {
     Query: {
-        category: categoryResolver
+        category: categoryResolver,
+        currencies: currencyResolver
     }
 };
 
