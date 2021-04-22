@@ -1,6 +1,7 @@
 import { Category } from "../type";
 import converter from '../../util/currency-converter';
 import Price from "./price";
+import AttributeSet from "./attribute-set";
 
 const roundToTwoDecimals = (num: number) => Number((Math.round(num * 100) / 100).toFixed(2));
 
@@ -9,6 +10,7 @@ class Product {
     protected category: Category;
     protected description: string;
     protected gallery: string[] = [];
+    protected attributes: AttributeSet[] = [];
 
     constructor(
         protected name: string
@@ -41,6 +43,12 @@ class Product {
 
     setDescription(description: string) {
         this.description = description;
+
+        return this;
+    }
+
+    addAttributeSet(attributeSet: AttributeSet) {
+        this.attributes.push(attributeSet);
 
         return this;
     }

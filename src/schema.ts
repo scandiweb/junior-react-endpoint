@@ -6,15 +6,16 @@ const typeDefs = gql`
         amount: Float!
     }
 
-    type OptionValue {
-        id: Int!,
-        displayValue: String
+    type Attribute {
+        displayValue: String,
+        value: String,
+        id: String!
     }
 
-    type OptionSet {
-        id: Int!,
+    type AttributeSet {
+        id: String!,
         name: String,
-        values: [OptionValue]
+        items: [Attribute]
     }
 
     type Product {
@@ -22,7 +23,7 @@ const typeDefs = gql`
         gallery: [String],
         description: String!,
         category: String!,
-        options: OptionSet
+        attributes: [AttributeSet]
         prices: [Price!]!,
     }
 
