@@ -8,13 +8,19 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   devtool: "inline-source-map",
-  entry: ["webpack/hot/poll?1000", path.join(__dirname, "src/main.ts")],
+  entry: [
+    "webpack/hot/poll?1000", 
+    path.join(__dirname, "src/main.ts")
+  ],
   externals: [
     nodeExternals({
       allowlist: ["webpack/hot/poll?1000"],
     }),
   ],
   mode: "development",
-  plugins: [new CleanWebpackPlugin(), new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(), 
+    new webpack.HotModuleReplacementPlugin()
+  ],
   watch: true,
 });

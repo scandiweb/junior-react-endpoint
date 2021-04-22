@@ -1,3 +1,4 @@
 export enum Category {
-    clothes = 'clothes'
+    clothes = 'clothes',
+    tech = 'tech'
 };
