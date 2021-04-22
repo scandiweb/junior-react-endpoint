@@ -34,8 +34,10 @@ const colors = new AttributeSet('Color')
 const yesNo = [new Attribute('Yes'), new Attribute('No')];
 
 const capacity = new AttributeSet('Capacity')
-    .addItem(new Attribute('512G'))
-    .addItem(new Attribute('1T'))
+    .addItemList([
+        new Attribute('512G'),
+        new Attribute('1T')
+    ]);
 
 const products: Product[] = [
     new Product('Nike Air Huarache Le')
