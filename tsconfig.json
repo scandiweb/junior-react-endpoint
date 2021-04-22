@@ -1,9 +1,10 @@
 {
     "include": ["./src/**/*"],
     "compilerOptions": {
-      "outDir": "./built",
+      "outDir": "./dist",
       "allowJs": true,
       "target": "es5",
-      "noImplicitAny": true
+      "noImplicitAny": true,
+      "esModuleInterop": true
     }
 }
