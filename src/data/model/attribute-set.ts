@@ -15,6 +15,12 @@ class AttributeSet {
 
         return this;
     }
+
+    addItemList(items: Attribute[]) {
+        this.items.push(...items);
+
+        return this;
+    }
 }
 
 export default AttributeSet;

@@ -1,28 +1,37 @@
 import Product from "./model/product";
 import { Category } from "./type";
 
-import { xboxDescription } from './items/descriptions';
+import { xboxDescription, airpodsDescription, airtagDescription } from './items/descriptions';
 import AttributeSet from "./model/attribute-set";
 import Attribute from "./model/attribute";
 
 const shoeSizes = new AttributeSet('Size')
-    .addItem(new Attribute('40'))
-    .addItem(new Attribute('41'))
-    .addItem(new Attribute('42'))
-    .addItem(new Attribute('43'));
+    .addItemList([
+        new Attribute('40'),
+        new Attribute('41'),
+        new Attribute('42'),
+        new Attribute('43')
+    ]);
+    
 
 const clothesSizes = new AttributeSet('Size')
-    .addItem(new Attribute('Small', 'S'))
-    .addItem(new Attribute('Medium', 'M'))
-    .addItem(new Attribute('Large', 'L'))
-    .addItem(new Attribute('Extra Large', 'XL'));
+    .addItemList([
+        new Attribute('Small', 'S'),
+        new Attribute('Medium', 'M'),
+        new Attribute('Large', 'L'),
+        new Attribute('Extra Large', 'XL')
+    ]);
 
 const colors = new AttributeSet('Color')
-    .addItem(new Attribute('Green', '#44FF03'))
-    .addItem(new Attribute('Cyan', '#03FFF7'))
-    .addItem(new Attribute('Blue', '#030BFF'))
-    .addItem(new Attribute('Black', '#000000'))
-    .addItem(new Attribute('White', '#FFFFFF'));
+    .addItemList([
+        new Attribute('Green', '#44FF03'),
+        new Attribute('Cyan', '#03FFF7'),
+        new Attribute('Blue', '#030BFF'),
+        new Attribute('Black', '#000000'),
+        new Attribute('White', '#FFFFFF')
+    ]);
+
+const yesNo = [new Attribute('Yes'), new Attribute('No')];
 
 const capacity = new AttributeSet('Capacity')
     .addItem(new Attribute('512G'))
@@ -82,6 +91,46 @@ const products: Product[] = [
         .addAttributeSet(colors)
         .addAttributeSet(capacity)
         .setDescription(xboxDescription)
+        .setCategory(Category.tech),
+
+    new Product('iMac 2021')
+        .setPrice(1400)
+        .addImages([
+            'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000'
+        ])
+        .addAttributeSet(new AttributeSet('Capacity')
+            .addItem(new Attribute('256GB'))
+            .addItem(new Attribute('512GB'))
+        )
+        .setDescription('The new iMac!')
+        .addAttributeSet(new AttributeSet('With USB 3 ports').addItemList(yesNo))
+        .addAttributeSet(new AttributeSet('Touch ID in keyboard').addItemList(yesNo))
+        .setCategory(Category.tech),
+
+    new Product('iPhone 12 Pro')
+        .setPrice(830)
+        .setDescription('This is iPhone 12. Nothing else to say.')
+        .addImages([
+            'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000'
+        ])
+        .addAttributeSet(capacity)
+        .addAttributeSet(colors)
+        .setCategory(Category.tech),
+
+    new Product('AirPods Pro')
+        .setPrice(249)
+        .addImages([
+            'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1591634795000'
+        ])
+        .setDescription(airpodsDescription)
+        .setCategory(Category.tech),
+
+    new Product('AirTag')
+        .setPrice(100)
+        .addImages([
+            'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-double-select-202104?wid=445&hei=370&fmt=jpeg&qlt=95&.v=1617761672000'
+        ])
+        .setDescription(airtagDescription)
         .setCategory(Category.tech)
 ];
 
