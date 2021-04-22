@@ -1,4 +1,4 @@
-const categoryResolver = require('./category');
+import categoryResolver from './category';
 
 const resolvers = {
     Query: {
@@ -6,4 +6,4 @@ const resolvers = {
     }
 };
 
-module.exports = resolvers;
+export default resolvers;

@@ -2,7 +2,7 @@ const Category = {
     clothes: 'clothes'
 };
 
-const products = [{
+export const products = [{
     name: 'Sneakers',
     price: [{
         currency: 'EUR',
@@ -23,5 +23,3 @@ const products = [{
     }],
     category: Category.clothes
 }];
-
-module.exports = products;
