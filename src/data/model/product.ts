@@ -8,7 +8,7 @@ class Product {
     protected prices: Price[] = [];
     protected category: Category;
     protected description: string;
-    protected images: string[] = [];
+    protected gallery: string[] = [];
 
     constructor(
         protected name: string
@@ -19,6 +19,8 @@ class Product {
 
         return this;
     }
+
+    getCategory = () => this.category;
 
     setPrice(amountEUR: number) {
         converter.availableCurrencies.forEach((currencyCode) => {
@@ -44,13 +46,13 @@ class Product {
     }
 
     addImage(url: string) {
-        this.images.push(url);
+        this.gallery.push(url);
 
         return this;
     }
 
     addImages(urls: string[]) {
-        this.images.push(...urls);
+        this.gallery.push(...urls);
 
         return this;
     }

@@ -21,6 +21,7 @@ const typeDefs = gql`
         name: String!,
         gallery: [String],
         description: String!,
+        category: String!,
         options: OptionSet
         prices: [Price!]!,
     }
@@ -30,7 +31,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        category: Category
+        category(title: String): Category
     }
 `;
 
