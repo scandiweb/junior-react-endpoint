@@ -11,6 +11,7 @@ class Product {
     protected description: string;
     protected gallery: string[] = [];
     protected attributes: AttributeSet[] = [];
+    protected inStock: boolean = true;
 
     constructor(
         protected name: string
@@ -43,6 +44,12 @@ class Product {
 
     setDescription(description: string) {
         this.description = description;
+
+        return this;
+    }
+
+    setInStock(is: boolean) {
+        this.inStock = is;
 
         return this;
     }

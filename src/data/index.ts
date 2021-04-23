@@ -79,7 +79,8 @@ const products: Product[] = [
         ])
         .addAttributeSet(colors)
         .addAttributeSet(capacity)
-        .setDescription('<p>This will always be out of stock. Although, you can try to buy it now!</p>')
+        .setInStock(false)
+        .setDescription('<p>A good gaming console. Plays games of PS4! Enjoy if you can buy it mwahahahaha</p>')
         .setCategory(Category.tech),
 
     new Product('Xbox Series S 512GB')
@@ -91,6 +92,7 @@ const products: Product[] = [
             'https://images-na.ssl-images-amazon.com/images/I/61IYrCrBzxL._SL1500_.jpg',
             'https://images-na.ssl-images-amazon.com/images/I/61RnXmpAmIL._SL1500_.jpg'
         ])
+        .setInStock(false)
         .addAttributeSet(colors)
         .addAttributeSet(capacity)
         .setDescription(xboxDescription)
@@ -125,6 +127,7 @@ const products: Product[] = [
         .addImages([
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1591634795000'
         ])
+        .setInStock(false)
         .setDescription(airpodsDescription)
         .setCategory(Category.tech),
 
