@@ -52,9 +52,10 @@ const products: Product[] = [
             'https://cdn.shopify.com/s/files/1/0087/6193/3920/products/DD1381200_DEOA_4_720x.jpg?v=1612816087'
         ])
         .setCategory(Category.clothes)
+        .setBrand('Nike x Stussy')
         .addAttributeSet(shoeSizes),
 
-    new Product('Canada Goose Jacket')
+    new Product('Jacket')
         .setPrice(430)
         .addImages([
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg',
@@ -65,6 +66,7 @@ const products: Product[] = [
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016111/product-image/2409L_61_e.jpg'
         ])
         .addAttributeSet(clothesSizes)
+        .setBrand('Canada Goose')
         .setDescription('<p>Awesome winter jacket</p>')
         .setCategory(Category.clothes),
 
@@ -79,6 +81,7 @@ const products: Product[] = [
         ])
         .addAttributeSet(colors)
         .addAttributeSet(capacity)
+        .setBrand('Sony')
         .setInStock(false)
         .setDescription('<p>A good gaming console. Plays games of PS4! Enjoy if you can buy it mwahahahaha</p>')
         .setCategory(Category.tech),
@@ -92,6 +95,7 @@ const products: Product[] = [
             'https://images-na.ssl-images-amazon.com/images/I/61IYrCrBzxL._SL1500_.jpg',
             'https://images-na.ssl-images-amazon.com/images/I/61RnXmpAmIL._SL1500_.jpg'
         ])
+        .setBrand('Microsoft')
         .setInStock(false)
         .addAttributeSet(colors)
         .addAttributeSet(capacity)
@@ -100,6 +104,7 @@ const products: Product[] = [
 
     new Product('iMac 2021')
         .setPrice(1400)
+        .setBrand('Apple')
         .addImages([
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-blue-selection-hero-202104?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1617492405000'
         ])
@@ -114,6 +119,7 @@ const products: Product[] = [
 
     new Product('iPhone 12 Pro')
         .setPrice(830)
+        .setBrand('Apple')
         .setDescription('This is iPhone 12. Nothing else to say.')
         .addImages([
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604021663000'
@@ -124,6 +130,7 @@ const products: Product[] = [
 
     new Product('AirPods Pro')
         .setPrice(249)
+        .setBrand('Apple')
         .addImages([
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1591634795000'
         ])
@@ -133,6 +140,7 @@ const products: Product[] = [
 
     new Product('AirTag')
         .setPrice(100)
+        .setBrand('Apple')
         .addImages([
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-double-select-202104?wid=445&hei=370&fmt=jpeg&qlt=95&.v=1617761672000'
         ])

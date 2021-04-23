@@ -12,6 +12,7 @@ class Product {
     protected gallery: string[] = [];
     protected attributes: AttributeSet[] = [];
     protected inStock: boolean = true;
+    protected brand: string;
 
     constructor(
         protected name: string
@@ -50,6 +51,12 @@ class Product {
 
     setInStock(is: boolean) {
         this.inStock = is;
+
+        return this;
+    }
+
+    setBrand(brand: string) {
+        this.brand = brand;
 
         return this;
     }
