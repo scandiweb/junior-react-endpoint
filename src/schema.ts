@@ -15,6 +15,7 @@ const typeDefs = gql`
     type AttributeSet {
         id: String!,
         name: String,
+        type: String,
         items: [Attribute]
     }
 
@@ -32,7 +33,7 @@ const typeDefs = gql`
     }
 
     input CategoryInput {
-        title: String
+        title: String!
     }
 
     type Query {

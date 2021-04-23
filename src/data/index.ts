@@ -2,7 +2,7 @@ import Product from "./model/product";
 import { Category } from "./type";
 
 import { xboxDescription, airpodsDescription, airtagDescription } from './items/descriptions';
-import AttributeSet from "./model/attribute-set";
+import AttributeSet, { AttributeType } from "./model/attribute-set";
 import Attribute from "./model/attribute";
 
 const shoeSizes = new AttributeSet('Size')
@@ -23,6 +23,7 @@ const clothesSizes = new AttributeSet('Size')
     ]);
 
 const colors = new AttributeSet('Color')
+    .setType(AttributeType.swatch)
     .addItemList([
         new Attribute('Green', '#44FF03'),
         new Attribute('Cyan', '#03FFF7'),

@@ -1,8 +1,14 @@
 import Attribute from "./attribute";
 
+export enum AttributeType {
+    text = 'text',
+    swatch = 'swatch'
+}
+
 class AttributeSet {
     protected id: string;
     protected items: Attribute[] = [];
+    protected type: AttributeType = AttributeType.text;
 
     constructor(
         protected name: string
@@ -18,6 +24,12 @@ class AttributeSet {
 
     addItemList(items: Attribute[]) {
         this.items.push(...items);
+
+        return this;
+    }
+
+    setType(type: AttributeType) {
+        this.type = type;
 
         return this;
     }
