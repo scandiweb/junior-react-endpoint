@@ -15,7 +15,14 @@ const categoryResolver = (_parent: any, args: Args) => {
         )
         : products;
 
-    return { products: result };
+    if (!result.length) {
+        return null;
+    }
+
+    return {
+        name: title ? title : 'all',
+        products: result 
+    };
 }
 
 export default categoryResolver;

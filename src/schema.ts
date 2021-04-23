@@ -29,6 +29,7 @@ const typeDefs = gql`
     }
 
     type Category {
+        name: String,
         products: [Product]!
     }
 
