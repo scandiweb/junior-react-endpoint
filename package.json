@@ -5,7 +5,7 @@
   "main": "src/main.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/main.js",
     "dev": "concurrently \"tsc -w\" \"nodemon dist/main.js\""
   },
   "keywords": [],
