@@ -13,6 +13,7 @@ class Product {
     protected attributes: AttributeSet[] = [];
     protected inStock: boolean = true;
     protected brand: string;
+    protected id: string;
 
     constructor(
         protected name: string
@@ -33,6 +34,12 @@ class Product {
                 roundToTwoDecimals(converter.convertFromEUR(amountEUR, currencyCode))
             ))
         });
+
+        return this;
+    }
+
+    setId(id: string) {
+        this.id = id;
 
         return this;
     }

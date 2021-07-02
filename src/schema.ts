@@ -20,6 +20,7 @@ const typeDefs = gql`
     }
 
     type Product {
+        id: String!,
         name: String!,
         inStock: Boolean,
         gallery: [String],

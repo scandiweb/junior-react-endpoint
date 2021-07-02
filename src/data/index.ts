@@ -42,6 +42,7 @@ const capacity = new AttributeSet('Capacity')
 
 const products: Product[] = [
     new Product('Nike Air Huarache Le')
+        .setId('huarache-x-stussy-le')
         .setPrice(120)
         .setDescription('<p>Great sneakers for everyday use!</p>')
         .addImages([
@@ -56,6 +57,7 @@ const products: Product[] = [
         .addAttributeSet(shoeSizes),
 
     new Product('Jacket')
+        .setId('jacket-canada-goosee')
         .setPrice(430)
         .addImages([
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016105/product-image/2409L_61.jpg',
@@ -71,6 +73,7 @@ const products: Product[] = [
         .setCategory(Category.clothes),
 
     new Product('PlayStation 5')
+        .setId('ps-5')
         .setPrice(700)
         .addImages([
             'https://images-na.ssl-images-amazon.com/images/I/510VSJ9mWDL._SL1262_.jpg',
@@ -87,6 +90,7 @@ const products: Product[] = [
         .setCategory(Category.tech),
 
     new Product('Xbox Series S 512GB')
+        .setId('xbox-series-s')
         .setPrice(277)
         .addImages([
             'https://images-na.ssl-images-amazon.com/images/I/71vPCX0bS-L._SL1500_.jpg',
@@ -103,6 +107,7 @@ const products: Product[] = [
         .setCategory(Category.tech),
 
     new Product('iMac 2021')
+        .setId('apple-imac-2021')
         .setPrice(1400)
         .setBrand('Apple')
         .addImages([
@@ -118,6 +123,7 @@ const products: Product[] = [
         .setCategory(Category.tech),
 
     new Product('iPhone 12 Pro')
+        .setId('apple-iphone-12-pro')
         .setPrice(830)
         .setBrand('Apple')
         .setDescription('This is iPhone 12. Nothing else to say.')
@@ -129,6 +135,7 @@ const products: Product[] = [
         .setCategory(Category.tech),
 
     new Product('AirPods Pro')
+        .setId('apple-airpods-pro')
         .setPrice(249)
         .setBrand('Apple')
         .addImages([
@@ -139,6 +146,7 @@ const products: Product[] = [
         .setCategory(Category.tech),
 
     new Product('AirTag')
+        .setId('apple-airtag')
         .setPrice(100)
         .setBrand('Apple')
         .addImages([
