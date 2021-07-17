@@ -28,6 +28,7 @@ const typeDefs = gql`
         category: String!,
         attributes: [AttributeSet]
         prices: [Price!]!,
+        brand: String!
     }
 
     type Category {
