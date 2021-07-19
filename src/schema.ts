@@ -28,6 +28,7 @@ const typeDefs = gql`
         category: String!,
         attributes: [AttributeSet]
         prices: [Price!]!,
+        brand: String!
     }
 
     type Category {
@@ -40,7 +41,9 @@ const typeDefs = gql`
     }
 
     type Query {
+        categories: [Category],
         category(input: CategoryInput): Category,
+        product(id: String!): Product,
         currencies: [String]
     }
 `;
