@@ -2,7 +2,7 @@ import { gql } from 'apollo-server';
 
 const typeDefs = gql`
     type Price {
-        currency: String!,
+        currency: Currency!,
         amount: Float!
     }
 
@@ -36,6 +36,11 @@ const typeDefs = gql`
         products: [Product]!
     }
 
+    type Currency {
+        label: String!,
+        symbol: String!
+    }
+
     input CategoryInput {
         title: String!
     }
@@ -44,7 +49,7 @@ const typeDefs = gql`
         categories: [Category],
         category(input: CategoryInput): Category,
         product(id: String!): Product,
-        currencies: [String]
+        currencies: [Currency]
     }
 `;
 

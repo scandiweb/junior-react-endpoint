@@ -12,3 +12,8 @@ export type CategoryShape = {
 };
 
 export type CategoryMap = Record<Category, CategoryShape>;
+
+export type Currency = {
+    label: string;
+    symbol: string;
+}

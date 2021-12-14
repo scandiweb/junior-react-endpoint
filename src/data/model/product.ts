@@ -30,10 +30,12 @@ class Product {
     getCategory = () => this.category;
 
     setPrice(amountEUR: number) {
-        converter.availableCurrencies.forEach((currencyCode) => {
+        converter.availableCurrencies.forEach((currency) => {
             this.addPrice(new Price(
-                currencyCode,
-                roundToTwoDecimals(converter.convertFromEUR(amountEUR, currencyCode))
+                currency,
+                roundToTwoDecimals(
+                    converter.convertFromEUR(amountEUR, currency.label)
+                )
             ))
         });
 

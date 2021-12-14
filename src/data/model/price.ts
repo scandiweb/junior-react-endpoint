@@ -1,6 +1,8 @@
+import { Currency } from '../type';
+
 class Price {
     constructor(
-        protected currency: string,
+        protected currency: Currency,
         protected amount: number
     ) {}
 }
