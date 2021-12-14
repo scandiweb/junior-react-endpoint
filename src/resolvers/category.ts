@@ -1,4 +1,5 @@
 import { products } from '../data';
+import { Category, CategoryShape } from '../data/type'
 
 type Args = {
     input?: {
@@ -6,22 +7,26 @@ type Args = {
     }
 }
 
-const categoryResolver = (_parent: any, args: Args) => {
+const categoryResolver = (_parent: any, args: Args): CategoryShape => {
     const { input: { title } = {} } = args;
 
-    const result = title 
-        ? products.filter(
+    let result;
+
+    if (!title || title === Category.all) {
+        result = products;
+    } else {
+        result = products.filter(
             (product) => product.getCategory() === title
-        )
-        : products;
+        );
+    }
 
     if (!result.length) {
         return null;
     }
 
     return {
-        name: title ? title : 'all',
-        products: result 
+        name: title ? (title as Category) : Category.all,
+        products: result
     };
 }
 
