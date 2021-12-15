@@ -12,7 +12,7 @@ const shoeSizes = new AttributeSet('Size')
         new Attribute('42'),
         new Attribute('43')
     ]);
-    
+
 
 const clothesSizes = new AttributeSet('Size')
     .addItemList([
@@ -65,7 +65,8 @@ const products: Product[] = [
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016108/product-image/2409L_61_b.jpg',
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016109/product-image/2409L_61_c.jpg',
             'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016110/product-image/2409L_61_d.jpg',
-            'https://images.canadagoose.com/image/upload/w_480,c_scale,f_auto,q_auto:best/v1576016111/product-image/2409L_61_e.jpg'
+            'https://images.canadagoose.com/image/upload/w_1333,c_scale,f_auto,q_auto:best/v1634058169/product-image/2409L_61_o.png',
+            'https://images.canadagoose.com/image/upload/w_1333,c_scale,f_auto,q_auto:best/v1634058159/product-image/2409L_61_p.png'
         ])
         .addAttributeSet(clothesSizes)
         .setBrand('Canada Goose')

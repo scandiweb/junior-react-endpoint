@@ -1,5 +1,6 @@
 import converter from '../util/currency-converter';
+import { Currency } from '../data/type';
 
-const currencyResolver = () => converter.availableCurrencies;
+const currencyResolver = (): Currency[] => converter.availableCurrencies;
 
 export default currencyResolver;

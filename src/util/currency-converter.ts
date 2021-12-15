@@ -6,8 +6,15 @@ const rates: Record<string, number> = {
     RUB: 91.181299
 }
 
+const symbols = ['$', '£', 'A$', '¥', '₽'];
+
 const currencyConverter = {
-    availableCurrencies: Object.keys(rates),
+    availableCurrencies: Object
+        .keys(rates)
+        .map((label, i) => ({
+            label,
+            symbol: symbols[i]
+        })),
 
     convertFromEUR(amount: number, targetCurrency: string) {
         return rates[targetCurrency] * amount;

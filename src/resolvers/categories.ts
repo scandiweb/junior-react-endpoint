@@ -1,15 +1,7 @@
 import { products } from "../data";
-import Product from "../data/model/product";
-import { Category } from "../data/type";
+import { Category, CategoryShape, CategoryMap } from "../data/type";
 
-type CategoryShape = {
-    name: Category,
-    products: Product[]
-};
-
-type CategoryMap = Record<Category, CategoryShape>;
-
-const categoriesResolver = () => {
+const categoriesResolver = (): CategoryShape[] => {
     const result = products.reduce((categories, product) => {
         const category = product.getCategory();
 
@@ -29,7 +21,13 @@ const categoriesResolver = () => {
         return categories;
     }, {} as CategoryMap);
 
-    return Object.values(result);
+    return [
+        {
+            name: Category.all,
+            products
+        },
+        ...Object.values(result),
+    ];
 };
 
 export default categoriesResolver;
